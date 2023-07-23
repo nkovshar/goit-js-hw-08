@@ -29,8 +29,8 @@ function populateForm() {
 function onFormSubmit(evt) { 
     evt.preventDefault();
 
-    if (email.value || message.value === "") { 
-        alert('Please, fill in all fields!');
+    if (email.value === "" || message.value === "") { 
+       return alert('Please, fill in all fields!');
     }
 
     console.log({ email: email.value, message: message.value });
